@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: sdate
+spec:
+    replicas: 1
+    selector:
+        matchLabels:
+            app: sdate
+    template:
+        metadata:
+            labels:
+                app: sdate
+        spec:
+            containers:
+                - name: sdate
+                  image: docker.io/djay1720/sdate:latest
+                  ports:
+                   - containerPort: 9000
