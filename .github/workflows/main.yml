@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Log in to Docker Hub
-        run: docker login -u djay1720 -p 
+        run: docker login -u djay1720 -p Nashikmay@17
 
       - name: Build the Docker image
         run: docker build -t djay1720/sdate:latest .
